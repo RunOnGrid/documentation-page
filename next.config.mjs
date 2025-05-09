@@ -9,6 +9,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  output: 'standalone', // Si deseas mantener esta línea
 }
 
 export default nextConfig

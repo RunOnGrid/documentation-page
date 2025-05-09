@@ -1,4 +1,4 @@
-# Use Node.js LTS version
+#Use Node.js LTS version
 FROM node:20-alpine AS base
 
 # Install pnpm
@@ -37,5 +37,5 @@ ENV PORT=3000
 # Expose the port
 EXPOSE 3000
 
-# Start the application using next start
-CMD ["pnpm", "next", "start"]
+# Start the application
+CMD ["node", "server.js"]
