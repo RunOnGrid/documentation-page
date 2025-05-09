@@ -36,7 +36,7 @@ export default function RootLayout({
                 <Link href="https://x.com/OnGridRun" target="_blank" rel="noopener noreferrer">
                   <div className="w-5 h-5 flex items-center justify-center">
                     <Image
-                      src="/images/twitter-x.png"
+                      src="/images/xlogo.svg"
                       alt="X (Twitter)"
                       width={20}
                       height={20}
