@@ -16,15 +16,6 @@ export default function DeployCommandPage() {
       <div className="space-y-10">
         <section className="bg-[#1e1e1e] border border-[#333] rounded-lg p-6">
           <h2 className="text-xl font-semibold mb-4">Usage</h2>
-          <div className="bg-[#121212] border border-[#333] rounded-lg p-4 mb-4">
-            <pre className="text-gray-300 font-mono text-sm p-2">
-              <code>grid deploy [options]</code>
-            </pre>
-          </div>
-        </section>
-
-        <section className="bg-[#1e1e1e] border border-[#333] rounded-lg p-6">
-          <h2 className="text-xl font-semibold mb-4">Options</h2>
           <div className="space-y-4">
             <div>
               <h3 className="text-lg font-medium mb-2">
@@ -33,7 +24,7 @@ export default function DeployCommandPage() {
               <p className="text-gray-300">Specify the cloud provider (akash or flux).</p>
               <div className="bg-[#121212] border border-[#333] rounded-lg p-4 mt-2">
                 <pre className="text-gray-300 font-mono text-sm p-2">
-                  <code>grid deploy provider akash</code>
+                  <code>grid deploy [provider]</code>
                 </pre>
               </div>
             </div>
@@ -49,7 +40,7 @@ export default function DeployCommandPage() {
               <p className="text-gray-300 mb-2">Deploy a specific directory to Grid:</p>
               <div className="bg-[#121212] border border-[#333] rounded-lg p-4">
                 <pre className="text-gray-300 font-mono text-sm p-2">
-                  <code>grid deploy</code>
+                  <code>grid deploy flux "/Users/alice/dev/fluxconfig.json" </code>
                 </pre>
               </div>
             </div>
@@ -148,7 +139,7 @@ services:
     credentials:
       host: ghcr.io
       username: alice
-      password: alice123
+      password: Grid_github_pat
     expose:
       - port: 8080
         as: 80
@@ -289,7 +280,7 @@ deployment:
             "hdd": 10,
             "tiered": true,
             "secrets": "",
-            "repoauth": "alice:alice123"
+            "repoauth": "alice:Grid_github_Pat"
         }
     ],
     "instances": 3,

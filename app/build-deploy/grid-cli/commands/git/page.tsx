@@ -13,7 +13,7 @@ export default function GitCommandPage() {
           <h2 className="text-xl font-semibold mb-4">Usage</h2>
           <div className="bg-[#121212] border border-[#333] rounded-lg p-4 mb-4">
             <pre className="text-gray-300 font-mono text-sm p-2">
-              <code>grid git [command] [options]</code>
+              <code>grid git [command]</code>
             </pre>
           </div>
         </section>
@@ -25,7 +25,7 @@ export default function GitCommandPage() {
               <h3 className="text-lg font-medium mb-2">
                 <code className="bg-[#121212] px-1 py-0.5 rounded text-sm">connect</code>
               </h3>
-              <p className="text-gray-300">Connect a Git repository to your Grid project.</p>
+              <p className="text-gray-300">Connect to Grid github app.</p>
               <div className="bg-[#121212] border border-[#333] rounded-lg p-4 mt-2">
                 <pre className="text-gray-300 font-mono text-sm p-2">
                   <code>grid git connect</code>
@@ -37,7 +37,7 @@ export default function GitCommandPage() {
               <h3 className="text-lg font-medium mb-2">
                 <code className="bg-[#121212] px-1 py-0.5 rounded text-sm">disconnect</code>
               </h3>
-              <p className="text-gray-300">Disconnect a Git repository from your Grid project.</p>
+              <p className="text-gray-300">Disconnect Grid github app.</p>
               <div className="bg-[#121212] border border-[#333] rounded-lg p-4 mt-2">
                 <pre className="text-gray-300 font-mono text-sm p-2">
                   <code>grid git disconnect</code>
@@ -47,78 +47,27 @@ export default function GitCommandPage() {
 
             <div>
               <h3 className="text-lg font-medium mb-2">
-                <code className="bg-[#121212] px-1 py-0.5 rounded text-sm">list</code>
+                <code className="bg-[#121212] px-1 py-0.5 rounded text-sm">repos</code>
               </h3>
-              <p className="text-gray-300">List all Git repositories connected to your Grid projects.</p>
+              <p className="text-gray-300">List all Github repositories connected to Grid github app.</p>
               <div className="bg-[#121212] border border-[#333] rounded-lg p-4 mt-2">
                 <pre className="text-gray-300 font-mono text-sm p-2">
-                  <code>grid git list</code>
+                  <code>grid git repos</code>
                 </pre>
               </div>
             </div>
-          </div>
-        </section>
-
-        <section className="bg-[#1e1e1e] border border-[#333] rounded-lg p-6">
-          <h2 className="text-xl font-semibold mb-4">Options</h2>
-          <div className="space-y-4">
             <div>
               <h3 className="text-lg font-medium mb-2">
-                <code className="bg-[#121212] px-1 py-0.5 rounded text-sm">--repo</code>
+                <code className="bg-[#121212] px-1 py-0.5 rounded text-sm">build</code>
               </h3>
-              <p className="text-gray-300">Specify the Git repository URL.</p>
+              <p className="text-gray-300">Build a github repository to a runnable container image.</p>
               <div className="bg-[#121212] border border-[#333] rounded-lg p-4 mt-2">
                 <pre className="text-gray-300 font-mono text-sm p-2">
-                  <code>grid git connect --repo https://github.com/username/repo.git</code>
+                  <code>grid git build</code>
                 </pre>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-medium mb-2">
-                <code className="bg-[#121212] px-1 py-0.5 rounded text-sm">--branch</code>
-              </h3>
-              <p className="text-gray-300">Specify the Git branch to deploy from.</p>
-              <div className="bg-[#121212] border border-[#333] rounded-lg p-4 mt-2">
-                <pre className="text-gray-300 font-mono text-sm p-2">
-                  <code>grid git connect --branch main</code>
-                </pre>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-[#1e1e1e] border border-[#333] rounded-lg p-6">
-          <h2 className="text-xl font-semibold mb-4">Examples</h2>
-
-          <div className="space-y-6">
-            <div>
-              <h3 className="text-lg font-medium mb-2">Connect a GitHub repository</h3>
-              <p className="text-gray-300 mb-2">Connect a GitHub repository to your Grid project:</p>
-              <div className="bg-[#121212] border border-[#333] rounded-lg p-4">
-                <pre className="text-gray-300 font-mono text-sm p-2">
-                  <code>grid git connect --repo https://github.com/username/repo.git --branch main</code>
-                </pre>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-medium mb-2">List connected repositories</h3>
-              <p className="text-gray-300 mb-2">List all Git repositories connected to your Grid projects:</p>
-              <div className="bg-[#121212] border border-[#333] rounded-lg p-4">
-                <pre className="text-gray-300 font-mono text-sm p-2">
-                  <code>grid git list</code>
-                </pre>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-medium mb-2">Disconnect a repository</h3>
-              <p className="text-gray-300 mb-2">Disconnect a Git repository from your Grid project:</p>
-              <div className="bg-[#121212] border border-[#333] rounded-lg p-4">
-                <pre className="text-gray-300 font-mono text-sm p-2">
-                  <code>grid git disconnect</code>
-                </pre>
+                <p className="text-gray-300 text-sm">
+                  Using the <code className="bg-[#121212] px-1 py-0.5 rounded text-sm">build</code> command will trigger github actions on the selected repository.
+                </p>
               </div>
             </div>
           </div>

@@ -130,9 +130,12 @@ export default function GridCliPage() {
             <Link href="/build-deploy/grid-cli/commands/help" className="text-green-500 hover:underline">
               - help
             </Link>
-            <Link href="/build-deploy/grid-cli/commands/pull" className="text-green-500 hover:underline">
-              - pull
+            <Link href="/build-deploy/grid-cli/commands/delete" className="text-green-500 hover:underline">
+              - delete
             </Link>
+            {/* <Link href="/build-deploy/grid-cli/commands/pull" className="text-green-500 hover:underline">
+              - pull
+            </Link> */}
           </div>
         </section>
       </div>

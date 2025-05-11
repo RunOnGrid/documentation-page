@@ -17,7 +17,8 @@ export default function CommandNav() {
     { name: "logout", path: "/build-deploy/grid-cli/commands/logout" },
     { name: "refund", path: "/build-deploy/grid-cli/commands/refund" },
     { name: "help", path: "/build-deploy/grid-cli/commands/help" },
-    { name: "pull", path: "/build-deploy/grid-cli/commands/pull" },
+    { name: "delete", path: "/build-deploy/grid-cli/commands/delete" },
+    // { name: "pull", path: "/build-deploy/grid-cli/commands/pull" },
   ]
 
   // Find current command
