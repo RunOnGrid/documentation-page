@@ -188,7 +188,7 @@ deployment:
             "description": "testcli",
             "repotag": "gridcloud/hello-app:2.0",
             "ports": [
-             //this port is fill by grid  
+              36522 
             ],
             "domains": [""],
             "environmentParameters": [
@@ -202,7 +202,7 @@ deployment:
             "cpu": 0.1,
             "ram": 1000,
             "hdd": 10,
-            "tiered": true,
+            "tiered": false,
             "secrets": "",
             "repoauth": ""
         }
@@ -226,7 +226,7 @@ deployment:
             "description": "Private Docker container example",
             "repotag": "private-repo/app:latest",
             "ports": [
-              //this port is filled by grid 
+              36522
             ],
             "domains": [""],
             "environmentParameters": [
@@ -264,7 +264,7 @@ deployment:
             "description": "testcli",
             "repotag": "ghcr.io/alice/alicetest:latest",
             "ports": [
-                //this port is filled by grid
+                36522
             ],
             "domains": [""],
             "environmentParameters": [
