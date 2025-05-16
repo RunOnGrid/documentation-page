@@ -1,4 +1,69 @@
+"use client"
+
 import Link from "next/link"
+import { useState } from "react"
+
+function PackageManagerSelector() {
+  const [selectedManager, setSelectedManager] = useState("npm")
+
+  const commands = {
+    npm: "npm install -g cli-grid",
+    yarn: "yarn global add cli-grid",
+    pnpm: "pnpm i -g cli-grid",
+  }
+
+  return (
+    <div className="bg-[#121212] border border-[#333] rounded-lg p-4 mb-4">
+      <div className="flex items-center gap-2 mb-2">
+        {Object.keys(commands).map((manager) => (
+          <button
+            key={manager}
+            className={`text-xs px-2 py-1 rounded transition-colors ${
+              selectedManager === manager ? "bg-green-500 text-white" : "bg-[#1e1e1e] text-gray-400 hover:bg-[#252525]"
+            }`}
+            onClick={() => setSelectedManager(manager)}
+          >
+            {manager}
+          </button>
+        ))}
+      </div>
+      <pre className="text-gray-300 font-mono text-sm p-2">
+        <code>{commands[selectedManager]}</code>
+      </pre>
+    </div>
+  )
+}
+
+function UpdatePackageManagerSelector() {
+  const [selectedManager, setSelectedManager] = useState("npm")
+
+  const commands = {
+    npm: "npm install -g cli-grid",
+    yarn: "yarn global add cli-grid",
+    pnpm: "pnpm i -g cli-grid",
+  }
+
+  return (
+    <div className="bg-[#121212] border border-[#333] rounded-lg p-4 mb-4">
+      <div className="flex items-center gap-2 mb-2">
+        {Object.keys(commands).map((manager) => (
+          <button
+            key={manager}
+            className={`text-xs px-2 py-1 rounded transition-colors ${
+              selectedManager === manager ? "bg-green-500 text-white" : "bg-[#1e1e1e] text-gray-400 hover:bg-[#252525]"
+            }`}
+            onClick={() => setSelectedManager(manager)}
+          >
+            {manager}
+          </button>
+        ))}
+      </div>
+      <pre className="text-gray-300 font-mono text-sm p-2">
+        <code>{commands[selectedManager]}</code>
+      </pre>
+    </div>
+  )
+}
 
 export default function GridCliPage() {
   return (
@@ -30,18 +95,9 @@ export default function GridCliPage() {
           <h2 className="text-xl font-semibold mb-4">Installing Grid CLI</h2>
           <p className="text-gray-300 mb-4">To download and install Grid CLI, run the following command:</p>
 
-          <div className="bg-[#121212] border border-[#333] rounded-lg p-4 mb-4">
-            <div className="flex items-center gap-2 mb-2">
-              <span className="text-xs text-gray-400 px-2 py-1 bg-[#1e1e1e] rounded">npm</span>
-              <span className="text-xs text-gray-400 px-2 py-1 bg-[#1e1e1e] rounded">yarn</span>
-              <span className="text-xs text-gray-400 px-2 py-1 bg-[#1e1e1e] rounded">pnpm</span>
-            </div>
-            <pre className="text-gray-300 font-mono text-sm p-2">
-              <code>npm install -g @grid/cli</code>
-            </pre>
-          </div>
+          <PackageManagerSelector />
 
-          <p className="text-gray-300">
+          <p className="text-gray-300 mt-4">
             This will install the Grid CLI globally on your system, making it available from any terminal.
           </p>
         </section>
@@ -54,20 +110,11 @@ export default function GridCliPage() {
           </p>
 
           <p className="text-gray-300 mb-4">
-            If you have installed our command-line interface through npm or Yarn, the easiest way to update it is by
-            running the installation command yet again:
+            If you have installed our command-line interface through npm, Yarn, or pnpm, the easiest way to update it is
+            by running the installation command yet again:
           </p>
 
-          <div className="bg-[#121212] border border-[#333] rounded-lg p-4 mb-4">
-            <div className="flex items-center gap-2 mb-2">
-              <span className="text-xs text-gray-400 px-2 py-1 bg-[#1e1e1e] rounded">npm</span>
-              <span className="text-xs text-gray-400 px-2 py-1 bg-[#1e1e1e] rounded">yarn</span>
-              <span className="text-xs text-gray-400 px-2 py-1 bg-[#1e1e1e] rounded">pnpm</span>
-            </div>
-            <pre className="text-gray-300 font-mono text-sm p-2">
-              <code>npm install -g @grid/cli@latest</code>
-            </pre>
-          </div>
+          <UpdatePackageManagerSelector />
         </section>
 
         <section className="bg-[#1e1e1e] border border-[#333] rounded-lg p-6">
@@ -89,6 +136,27 @@ export default function GridCliPage() {
           <p className="text-gray-300 text-sm">
             Using the <code className="bg-[#121212] px-1 py-0.5 rounded text-sm">grid</code> command with the{" "}
             <code className="bg-[#121212] px-1 py-0.5 rounded text-sm">--version</code> option.
+          </p>
+        </section>
+        <section className="bg-[#1e1e1e] border border-[#333] rounded-lg p-6">
+          <h2 className="text-xl font-semibold mb-4">Checking available commands</h2>
+          <p className="text-gray-300 mb-4">
+            The <code className="bg-[#121212] px-1 py-0.5 rounded text-sm">help</code> option can be used to verify
+            available commands:
+          </p>
+
+          <div className="bg-[#121212] border border-[#333] rounded-lg p-4 mb-4">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="text-xs text-gray-400 px-2 py-1 bg-[#1e1e1e] rounded">terminal</span>
+            </div>
+            <pre className="text-gray-300 font-mono text-sm p-2">
+              <code>grid help</code>
+            </pre>
+          </div>
+
+          <p className="text-gray-300 text-sm">
+            Using the <code className="bg-[#121212] px-1 py-0.5 rounded text-sm">grid</code> command with the{" "}
+            <code className="bg-[#121212] px-1 py-0.5 rounded text-sm">help</code> option.
           </p>
         </section>
 
@@ -130,12 +198,9 @@ export default function GridCliPage() {
             <Link href="/build-deploy/grid-cli/commands/help" className="text-green-500 hover:underline">
               - help
             </Link>
-            <Link href="/build-deploy/grid-cli/commands/delete" className="text-green-500 hover:underline">
-              - delete
-            </Link>
-            {/* <Link href="/build-deploy/grid-cli/commands/pull" className="text-green-500 hover:underline">
+            <Link href="/build-deploy/grid-cli/commands/pull" className="text-green-500 hover:underline">
               - pull
-            </Link> */}
+            </Link>
           </div>
         </section>
       </div>

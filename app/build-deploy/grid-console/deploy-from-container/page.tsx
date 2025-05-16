@@ -176,38 +176,7 @@ export default function DeployFromContainerPage() {
             <div className="w-8 h-8 bg-[#1e1e1e] border border-green-500 rounded flex items-center justify-center mr-3">
               <span className="text-green-500 font-mono">5</span>
             </div>
-            Step 5: Builder
-          </h2>
-
-          <p className="text-gray-300 mb-4">
-            Unlike the GitHub repository flow, container registry components do not use GitHub Actions for building.
-          </p>
-
-          <p className="text-gray-300 mb-4">Instead:</p>
-
-          <ul className="list-disc pl-6 space-y-2 text-gray-300 mb-4">
-            <li>We will validate the provided image and credentials.</li>
-            <li>Once validated, the image is ready to deploy.</li>
-          </ul>
-
-          {/* Multicomponent content commented out
-          <div className="bg-[#2a2a2a] border-l-4 border-purple-500 p-4 rounded">
-            <p className="text-purple-400 font-semibold mb-1">🧠 Multicomponent Handling</p>
-            <p className="text-gray-300">
-              In multicomponent setups, components sourced from both GitHub and container registries are handled
-              together. Git components will go through the build phase, while container-based ones skip it and wait for
-              deployment.
-            </p>
-          </div>
-          */}
-        </section>
-
-        <section className="bg-[#1e1e1e] border border-[#333] rounded-lg p-6">
-          <h2 className="text-xl font-semibold mb-4 flex items-center">
-            <div className="w-8 h-8 bg-[#1e1e1e] border border-green-500 rounded flex items-center justify-center mr-3">
-              <span className="text-green-500 font-mono">6</span>
-            </div>
-            Step 6: Payments
+            Step 5: Payments
           </h2>
 
           <p className="text-gray-300 mb-4">
