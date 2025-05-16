@@ -99,36 +99,36 @@ export default function DeployFromGitHubPage() {
 
         <section className="bg-[#1e1e1e] border border-[#333] rounded-lg p-6">
           <h2 className="text-xl font-semibold mb-4 flex items-center">
-            <div className="w-8  h-8 bg-[#1e1e1e] border border-green-500 rounded flex items-center justify-center mr-3">
+            <div className="w-8 h-8 bg-[#1e1e1e] border border-green-500 rounded flex items-center justify-center mr-3">
               <span className="text-green-500 font-mono">3</span>
             </div>
-            Step 3: Add Application Components
+            Step 3: Trigger GitHub Actions Workflow
           </h2>
 
+          <p className="text-gray-300 mb-4">Configure your repository settings and resources:</p>
+
+          <div className="mb-6 border border-[#333] rounded-lg overflow-hidden">
+            <Image
+              src="/images/github-workflow-config.png"
+              alt="GitHub Workflow Configuration Interface"
+              width={1200}
+              height={600}
+              className="w-full"
+            />
+          </div>
+
           <p className="text-gray-300 mb-4">
-            Applications on Grid can consist of one or more components. This allows for modular deployments such as
-            microservices or frontend/backend setups.
+            After configuring your repository settings and resources, click the <strong>Run Workflow</strong> button to
+            trigger the GitHub Actions workflow.
           </p>
 
-          <p className="text-gray-300 mb-4">Each component can have its own:</p>
+          <p className="text-gray-300 mb-4">Grid will:</p>
 
           <ul className="list-disc pl-6 space-y-2 text-gray-300 mb-4">
-            <li>Git settings</li>
-            <li>Instance configuration (CPU, RAM, SSD)</li>
-            <li>Environment variables</li>
-            <li>Networking and runtime settings</li>
+            <li>Automatically push a grid-ci.yml file into your GitHub repository.</li>
+            <li>Trigger the corresponding GitHub Actions workflow for your application.</li>
+            <li>Configure the deployment with the specified resources (CPU, RAM, SSD).</li>
           </ul>
-
-          {/* Multicomponent content commented out
-          <div className="bg-[#2a2a2a] border-l-4 border-blue-500 p-4 rounded">
-            <p className="text-blue-400 font-semibold mb-1">🚀 Multicomponent Building</p>
-            <p className="text-gray-300">
-              If you declare multiple components using Git repositories, Grid will automatically generate independent
-              GitHub Action workflows (one per component) based on the grid-ci.yml. These workflows will run in
-              parallel, ensuring efficient and scalable builds for complex apps.
-            </p>
-          </div>
-          */}
         </section>
 
         <section className="bg-[#1e1e1e] border border-[#333] rounded-lg p-6">
@@ -136,88 +136,7 @@ export default function DeployFromGitHubPage() {
             <div className="w-8 h-8 bg-[#1e1e1e] border border-green-500 rounded flex items-center justify-center mr-3">
               <span className="text-green-500 font-mono">4</span>
             </div>
-            Step 4: Trigger Deployment Actions
-          </h2>
-
-          <p className="text-gray-300 mb-4">Once all components are configured:</p>
-
-          <p className="text-gray-300 mb-4">
-            Click the <strong>Continue</strong> button.
-          </p>
-
-          <div className="bg-[#1e1e1e] border border-[#333] rounded-lg p-4 my-6">
-            <p className="text-gray-300 text-sm text-center mb-4">Trigger Actions Confirmation Dialog</p>
-            <div className="flex justify-center">
-              <div className="relative w-full max-w-2xl overflow-hidden rounded-md border border-[#444]">
-                <Image
-                  src="/images/trigger-actions-modal.jpeg"
-                  alt="Trigger Actions Confirmation Dialog"
-                  width={600}
-                  height={350}
-                  className="w-full object-contain"
-                  quality={90}
-                />
-              </div>
-            </div>
-          </div>
-
-          <p className="text-gray-300 mb-4">Grid will:</p>
-
-          <ul className="list-disc pl-6 space-y-2 text-gray-300 mb-4">
-            <li>Automatically push a grid-ci.yml file into each GitHub repository involved.</li>
-            <li>Trigger the corresponding GitHub Actions workflows for each component.</li>
-          </ul>
-        </section>
-
-        <section className="bg-[#1e1e1e] border border-[#333] rounded-lg p-6">
-          <h2 className="text-xl font-semibold mb-4 flex items-center">
-            <div className="w-8 h-8 bg-[#1e1e1e] border border-green-500 rounded flex items-center justify-center mr-3">
-              <span className="text-green-500 font-mono">5</span>
-            </div>
-            Step 5: Builder
-          </h2>
-
-          <p className="text-gray-300 mb-4">After deployment is triggered:</p>
-
-          <div className="mb-6 flex justify-center">
-            <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-57NpZM5pupVqfYv4ThMaD8AjJ3Udo0.png"
-              alt="Building Status Interface"
-              width={800}
-              height={50}
-              className="rounded-md border border-[#444]"
-            />
-          </div>
-
-          <ul className="list-disc pl-6 space-y-2 text-gray-300 mb-4">
-            <li>The Grid UI will show the status of the build(s).</li>
-            <li>A link will appear to GitHub Actions workflow, letting you track the process in real time.</li>
-          </ul>
-
-          <p className="text-gray-300 mb-4">The grid-ci.yml defines:</p>
-
-          <ul className="list-disc pl-6 space-y-2 text-gray-300 mb-4">
-            <li>The build process (Dockerfile, Buildpacks, etc.)</li>
-          </ul>
-
-          {/* Multicomponent content commented out
-          <div className="bg-[#2a2a2a] border-l-4 border-green-500 p-4 rounded">
-            <p className="text-green-400 font-semibold mb-1">⚙️ Parallel Workflows</p>
-            <p className="text-gray-300">
-              If multiple Git components were added, Grid will handle them as independent jobs, each triggering a
-              parallel GitHub Actions workflow using the same grid-ci.yml. This enables simultaneous deployment of
-              multiple services or micro-frontends.
-            </p>
-          </div>
-          */}
-        </section>
-
-        <section className="bg-[#1e1e1e] border border-[#333] rounded-lg p-6">
-          <h2 className="text-xl font-semibold mb-4 flex items-center">
-            <div className="w-8 h-8 bg-[#1e1e1e] border border-green-500 rounded flex items-center justify-center mr-3">
-              <span className="text-green-500 font-mono">6</span>
-            </div>
-            Step 6: Payments
+            Step 4: Payments
           </h2>
 
           <p className="text-gray-300 mb-4">

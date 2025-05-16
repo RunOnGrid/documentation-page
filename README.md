@@ -26,4 +26,4 @@ This documentation is licensed under the MIT License.
 
 ## Support
 
-For support join our [Discord community](https://discord.gg/83unakN7).
+For support join our [Discord community](https://discord.gg/83unakN7).           
