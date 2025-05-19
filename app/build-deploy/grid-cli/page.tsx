@@ -165,7 +165,7 @@ export default function GridCliPage() {
           <p className="text-gray-300 mb-4">
             Grid CLI requires you to log in and authenticate before accessing resources or performing administrative
             tasks. In a terminal environment, you can use{" "}
-            <code className="bg-[#121212] px-1 py-0.5 rounded text-sm">grid login --google/--github</code>
+            <code className="bg-[#121212] px-1 py-0.5 rounded text-sm">grid login google/github</code>
             {/* Token authentication feature commented out for future use
             In a CI/CD environment where manual input is not possible, you can create a token on your{" "}
             <span className="text-green-500">tokens page</span> and then use the{" "}
