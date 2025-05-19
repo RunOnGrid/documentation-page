@@ -32,7 +32,7 @@ export default function LoginCommandPage() {
               <p className="text-gray-300">Login using GitHub authentication.</p>
               <div className="bg-[#121212] border border-[#333] rounded-lg p-4 mt-2">
                 <pre className="text-gray-300 font-mono text-sm p-2">
-                  <code>grid login --github</code>
+                  <code>grid login github</code>
                 </pre>
               </div>
             </div>
@@ -44,7 +44,7 @@ export default function LoginCommandPage() {
               <p className="text-gray-300">Login using Google authentication.</p>
               <div className="bg-[#121212] border border-[#333] rounded-lg p-4 mt-2">
                 <pre className="text-gray-300 font-mono text-sm p-2">
-                  <code>grid login --google</code>
+                  <code>grid login google</code>
                 </pre>
               </div>
             </div>
