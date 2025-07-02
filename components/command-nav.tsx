@@ -11,6 +11,7 @@ export default function CommandNav() {
 
   const commands = [
     { name: "deploy", path: "/build-deploy/grid-cli/commands/deploy" },
+    { name: "deploy", path: "/build-deploy/grid-cli/commands/logs" },
     { name: "git", path: "/build-deploy/grid-cli/commands/git" },
     { name: "list", path: "/build-deploy/grid-cli/commands/list" },
     { name: "login", path: "/build-deploy/grid-cli/commands/login" },

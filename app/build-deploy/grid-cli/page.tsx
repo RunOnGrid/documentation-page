@@ -180,6 +180,9 @@ export default function GridCliPage() {
             <Link href="/build-deploy/grid-cli/commands/deploy" className="text-green-500 hover:underline">
               - deploy
             </Link>
+            <Link href="/build-deploy/grid-cli/commands/logs" className="text-green-500 hover:underline">
+              - logs
+            </Link>
             <Link href="/build-deploy/grid-cli/commands/git" className="text-green-500 hover:underline">
               - git
             </Link>
