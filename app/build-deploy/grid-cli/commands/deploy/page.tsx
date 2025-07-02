@@ -182,6 +182,7 @@ deployment:
               title="Public Docker Container"
               description="Deploy a public container from Docker Hub on Flux"
               json={`{
+    "name": "testcli",
     "compose": [
         {
             "name": "benjatestcli",
@@ -220,6 +221,7 @@ deployment:
               title="Private Docker Container"
               description="Deploy a private container from Docker Hub with authentication on Flux"
               json={`{
+    "name": "testcli",
     "compose": [
         {
             "name": "private-container",
@@ -258,6 +260,7 @@ deployment:
               title="GitHub Container Registry"
               description="Deploy a container from GitHub Container Registry with authentication on Flux"
               json={`{
+    "name": "testcli",
     "compose": [
         {
             "name": "benjatestcli",
