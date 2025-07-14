@@ -187,7 +187,7 @@ export default function GridCliPage() {
               - git
             </Link>
             <Link href="/build-deploy/grid-cli/commands/list" className="text-green-500 hover:underline">
-              - list
+              - deployment
             </Link>
             <Link href="/build-deploy/grid-cli/commands/login" className="text-green-500 hover:underline">
               - login
