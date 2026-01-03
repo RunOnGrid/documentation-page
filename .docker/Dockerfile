@@ -13,7 +13,7 @@ COPY package.json pnpm-lock.yaml ./
 # Install dependencies
 RUN pnpm install 
 
-# Copy the rest of the application
+# Copy the rest of the application (excluding node_modules via .dockerignore)
 COPY . .
 
 # Build the application
