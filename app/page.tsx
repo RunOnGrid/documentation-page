@@ -14,7 +14,7 @@ export default function DocumentationPage() {
         <h1 className="text-5xl font-bold mb-4 text-center md:text-left">Grid Documentation</h1>
 
         <p className="text-gray-400 mb-12 text-lg">
-          Grid is a platform as a service for developers to build and deploy containerized applications on decentralized
+          Grid is a permisionless database development platform
           clouds.
         </p>
 
@@ -31,51 +31,52 @@ export default function DocumentationPage() {
             </div>
           </section>
 
-          <section>
-            <h2 className="text-2xl font-bold mb-6">Grid CLI</h2>
-            <div className="grid md:grid-cols-1 gap-6">
-              <Link href="/build-deploy/grid-cli">
-                <div className="bg-[#1e1e1e] border border-[#333] rounded-lg p-6 hover:border-green-500 transition-colors">
-                  <h3 className="text-xl font-semibold mb-2">Grid CLI</h3>
-                  <p className="text-gray-400 mt-4">
-                    Learn how to deploy and manage applications using the Grid command-line interface.
-                  </p>
-                </div>
-              </Link>
-            </div>
-          </section>
-
-          <section>
+          {/* <section>
             <h2 className="text-2xl font-bold mb-6">Grid Console</h2>
             <div className="grid md:grid-cols-1 gap-6">
               <Link href="/build-deploy/grid-console">
                 <div className="bg-[#1e1e1e] border border-[#333] rounded-lg p-6 hover:border-green-500 transition-colors">
                   <h3 className="text-xl font-semibold mb-2">Grid Console</h3>
                   <p className="text-gray-400 mt-4">
-                    Learn how to deploy and manage applications using the Grid web console.
+                    Learn how to create and manage applications using the Grid web console.
                   </p>
                 </div>
               </Link>
             </div>
-          </section>
+          </section> */}
+
+          {/* <section>
+            <h2 className="text-2xl font-bold mb-6">Grid CLI</h2>
+            <div className="grid md:grid-cols-1 gap-6">
+              <Link href="/build-deploy/grid-cli">
+                <div className="bg-[#1e1e1e] border border-[#333] rounded-lg p-6 hover:border-green-500 transition-colors">
+                  <h3 className="text-xl font-semibold mb-2">Grid CLI</h3>
+                  <p className="text-gray-400 mt-4">
+                    Learn how to create and manage databases using the Grid command-line interface.
+                  </p>
+                </div>
+              </Link>
+            </div>
+          </section> */}
+
 
           <section>
-            <h2 className="text-2xl font-bold mb-6">Deployment Options</h2>
+            <h2 className="text-2xl font-bold mb-6">Database Options</h2>
             <div className="grid md:grid-cols-2 gap-6">
-              <Link href="/build-deploy/grid-console/deploy-from-github">
+              <Link href="/build-deploy/grid-console/deploy-postgres">
                 <div className="bg-[#1e1e1e] border border-[#333] rounded-lg p-6 hover:border-green-500 transition-colors h-full">
-                  <h3 className="text-xl font-semibold mb-2">Deploy from GitHub</h3>
+                  <h3 className="text-xl font-semibold mb-2">Deploy a PostgreSQL</h3>
                   <p className="text-gray-400 mt-4">
-                    Learn how to deploy applications directly from your GitHub repositories.
+                    Learn how to create a PostgreSQL.
                   </p>
                 </div>
               </Link>
 
-              <Link href="/build-deploy/grid-console/deploy-from-container">
+              <Link href="/build-deploy/grid-console/deploy-valkey">
                 <div className="bg-[#1e1e1e] border border-[#333] rounded-lg p-6 hover:border-green-500 transition-colors h-full">
-                  <h3 className="text-xl font-semibold mb-2">Deploy from Container Registry</h3>
+                  <h3 className="text-xl font-semibold mb-2">Deploy a Valkey</h3>
                   <p className="text-gray-400 mt-4">
-                    Learn how to deploy pre-built container images from Docker Hub and GitHub Container Registry.
+                    Learn how to create a Valkey.
                   </p>
                 </div>
               </Link>
@@ -85,25 +86,17 @@ export default function DocumentationPage() {
           <section>
             <h2 className="text-2xl font-bold mb-6">Payments</h2>
             <div className="grid md:grid-cols-2 gap-6">
-              <Link href="/build-deploy/payments/akash">
+              <Link href="/payments">
                 <div className="bg-[#1e1e1e] border border-[#333] rounded-lg p-6 hover:border-green-500 transition-colors h-full">
                   <div className="flex items-center gap-2 mb-4">
-                    <h3 className="text-xl font-semibold">Akash Network</h3>
+                    <h3 className="text-xl font-semibold">akt tokens</h3>
                   </div>
                   <p className="text-gray-400">
-                    Deploy on Akash with per-second billing and pay-as-you-go pricing model.
+                    per-second billing and pay-as-you-go pricing model.
                   </p>
                 </div>
               </Link>
 
-              <Link href="/build-deploy/payments/flux">
-                <div className="bg-[#1e1e1e] border border-[#333] rounded-lg p-6 hover:border-green-500 transition-colors h-full">
-                  <div className="flex items-center gap-2 mb-4">
-                    <h3 className="text-xl font-semibold">Flux</h3>
-                  </div>
-                  <p className="text-gray-400">Deploy on Flux with prepaid model and duration-based deployments.</p>
-                </div>
-              </Link>
             </div>
           </section>
         </div>
