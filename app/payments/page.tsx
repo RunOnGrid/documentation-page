@@ -4,7 +4,7 @@ import Link from "next/link"
 export default function PaymentsPage() {
   return (
     <div className="max-w-5xl mx-auto">
-      <h1 className="text-3xl font-bold mb-6">Payments</h1>
+      <h1 className="text-3xl font-bold mb-6">akt tokens</h1>
 
       <p className="text-gray-300 mb-8">
         Grid uses AKT (Akash Network's native token) for all payments. Learn how to acquire AKT and deposit it to your Grid wallet.

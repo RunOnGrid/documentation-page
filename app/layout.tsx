@@ -10,7 +10,10 @@ import Link from "next/link"
 export const metadata = {
   title: "Grid Documentation",
   description: "Comprehensive documentation for the Grid platform",
-    generator: 'v0.dev'
+  icons: {
+    icon: '/images/grid-logo.png',
+    apple: '/images/grid-logo.png',
+  },
 }
 
 export default function RootLayout({
@@ -48,8 +51,8 @@ export default function RootLayout({
                   <Github size={20} className="text-gray-400 hover:text-white transition-colors" />
                 </Link>
                 <Button className="bg-green-500 hover:bg-green-600 text-white" asChild>
-                  <Link href="https://ongrid.run" target="_blank" rel="noopener noreferrer">
-                    Deploy Now
+                  <Link href="https://console.ongrid.run" target="_blank" rel="noopener noreferrer">
+                    Start project
                   </Link>
                 </Button>
               </div>
