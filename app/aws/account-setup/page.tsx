@@ -279,7 +279,7 @@ export default function AWSAccountSetupPage() {
           <p className="text-gray-300 mb-4">
             Now that you have an AWS account, continue with the setup process:
           </p>
-          <div className="space-y-3">
+          <div className="space-y-3 mb-4">
             <Link href="/aws/s3-bucket" className="block">
               <div className="bg-[#252525] border border-[#333] rounded-lg p-4 hover:border-green-500 transition-colors">
                 <div className="flex items-center justify-between">
@@ -291,6 +291,34 @@ export default function AWSAccountSetupPage() {
                 </div>
               </div>
             </Link>
+            <Link href="/aws/iam-access" className="block">
+              <div className="bg-[#252525] border border-[#333] rounded-lg p-4 hover:border-green-500 transition-colors">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-200">Configure IAM Access</h3>
+                    <p className="text-gray-400 text-sm mt-1">Set up IAM user with access keys and policies for S3 bucket access</p>
+                  </div>
+                  <span className="text-green-500">→</span>
+                </div>
+              </div>
+            </Link>
+            <Link href="/aws/configure-s3-backups" className="block">
+              <div className="bg-[#252525] border border-[#333] rounded-lg p-4 hover:border-green-500 transition-colors">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-200">Configure S3 Backups in Grid</h3>
+                    <p className="text-gray-400 text-sm mt-1">Enable S3 Backup and configure AWS credentials in your PostgreSQL deployment</p>
+                  </div>
+                  <span className="text-green-500">→</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div className="bg-[#2a2a2a] border-l-4 border-blue-500 p-4 rounded">
+            <p className="text-blue-400 font-semibold mb-1">Complete Setup Flow</p>
+            <p className="text-gray-300 text-sm">
+              The complete setup flow is: AWS Account Setup → Create S3 Bucket → Configure IAM Access → Configure S3 Backups in Grid. Make sure to enable S3 Backup when deploying PostgreSQL!
+            </p>
           </div>
         </section>
       </div>

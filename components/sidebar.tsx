@@ -113,6 +113,13 @@ export default function Sidebar() {
               indent={1} 
             />
           </Link>
+          <Link href="/aws/configure-s3-backups">
+            <NavItem 
+              label="Configure S3 Backups in Grid" 
+              active={pathname === "/aws/configure-s3-backups"} 
+              indent={1} 
+            />
+          </Link>
         </NavItemWithChildren>
       </div>
     </aside>

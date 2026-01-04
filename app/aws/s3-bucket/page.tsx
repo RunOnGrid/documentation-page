@@ -310,7 +310,7 @@ export default function CreateS3BucketPage() {
           <p className="text-gray-300 mb-4">
             Now that you have created a private S3 bucket, the next step is to configure IAM access so that Grid can upload backups to your bucket:
           </p>
-          <div className="space-y-3">
+          <div className="space-y-3 mb-4">
             <Link href="/aws/iam-access" className="block">
               <div className="bg-[#252525] border border-[#333] rounded-lg p-4 hover:border-green-500 transition-colors">
                 <div className="flex items-center justify-between">
@@ -322,6 +322,12 @@ export default function CreateS3BucketPage() {
                 </div>
               </div>
             </Link>
+          </div>
+          <div className="bg-[#2a2a2a] border-l-4 border-blue-500 p-4 rounded">
+            <p className="text-blue-400 font-semibold mb-1">After AWS Setup</p>
+            <p className="text-gray-300 text-sm">
+              Once you've completed all AWS setup steps (Account Setup, S3 Bucket, and IAM Access), you'll need to configure these credentials in Grid. See <Link href="/aws/configure-s3-backups" className="text-green-500 hover:underline">Configure S3 Backups in Grid</Link> for instructions.
+            </p>
           </div>
         </section>
       </div>

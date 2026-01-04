@@ -451,8 +451,11 @@ export default function ConfigureIAMAccessPage() {
 
           <div className="bg-[#2a2a2a] border-l-4 border-green-500 p-4 rounded">
             <p className="text-green-400 font-semibold mb-1">Next Steps</p>
-            <p className="text-gray-300">
+            <p className="text-gray-300 mb-2">
               You now have all the credentials needed to configure PostgreSQL backups in Grid. You'll use the Access Key ID, Secret Access Key, bucket name, and region when setting up backups in your Grid deployment.
+            </p>
+            <p className="text-gray-300">
+              Continue with: <Link href="/aws/configure-s3-backups" className="text-green-500 hover:underline font-semibold">Configure S3 Backups in Grid</Link> to set up backups in your PostgreSQL deployment.
             </p>
           </div>
         </section>

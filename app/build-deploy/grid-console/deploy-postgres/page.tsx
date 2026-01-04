@@ -72,7 +72,56 @@ export default function DeployFromContainerPage() {
             <div className="w-8 h-8 bg-[#1e1e1e] border border-green-500 rounded flex items-center justify-center mr-3">
               <span className="text-green-500 font-mono">2</span>
             </div>
-            Step 2: SSL CERTIFICATES (Optional)
+            Step 2: Enable S3 Backup (Optional)
+          </h2>
+
+          <p className="text-gray-300 mb-4">
+            If you want to automatically back up your PostgreSQL database to AWS S3, you can enable the S3 Backup option during deployment. This feature cannot be enabled on existing deployments.
+          </p>
+
+          <div className="space-y-4 mb-4">
+            <div className="bg-[#252525] border border-[#333] rounded-lg p-4">
+              <h3 className="text-lg font-semibold mb-2 text-gray-200">Enable S3 Backup</h3>
+              <p className="text-gray-300 text-sm mb-2">
+                In the deployment form, find the <strong>"S3 Backup"</strong> section:
+              </p>
+              <ul className="list-disc pl-6 space-y-1 text-gray-300 text-sm">
+                <li>Look for the toggle switch labeled <strong>"Enabled"</strong></li>
+                <li>Turn on the toggle to enable S3 backup functionality</li>
+                <li>A description will appear: <em>"A Node.js application that automatically backs up your PostgreSQL database to S3 via a cron job."</em></li>
+              </ul>
+            </div>
+
+            <div className="bg-[#2a2a2a] border-l-4 border-red-500 p-4 rounded mb-4">
+              <p className="text-red-400 font-semibold mb-1">⚠️ Important Requirement</p>
+              <p className="text-gray-300 text-sm">
+                You <strong>must</strong> enable S3 Backup during PostgreSQL deployment if you want to use this feature. This option cannot be enabled on existing deployments. If you need S3 backups but forgot to enable this option, you'll need to create a new deployment with S3 Backup enabled.
+              </p>
+            </div>
+
+            <div className="bg-[#2a2a2a] border-l-4 border-blue-500 p-4 rounded">
+              <p className="text-blue-400 font-semibold mb-1">Setup Required After Deployment</p>
+              <p className="text-gray-300 text-sm mb-2">
+                After enabling S3 Backup and creating your deployment, you'll need to:
+              </p>
+              <ul className="list-disc pl-6 space-y-1 text-gray-300 text-xs">
+                <li>Set up an AWS account, S3 bucket, and IAM credentials (see <a href="/aws/account-setup" className="text-green-500 hover:underline">AWS documentation</a>)</li>
+                <li>Configure AWS credentials in the Variables tab of your deployment</li>
+                <li>Set up backup schedule and configuration options</li>
+              </ul>
+              <p className="text-gray-300 text-sm mt-2">
+                For detailed instructions on configuring S3 backups in Grid, see our <a href="/aws/configure-s3-backups" className="text-green-500 hover:underline">Configure S3 Backups in Grid</a> guide.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-[#1e1e1e] border border-[#333] rounded-lg p-6">
+          <h2 className="text-xl font-semibold mb-4 flex items-center">
+            <div className="w-8 h-8 bg-[#1e1e1e] border border-green-500 rounded flex items-center justify-center mr-3">
+              <span className="text-green-500 font-mono">3</span>
+            </div>
+            Step 3: SSL CERTIFICATES (Optional)
           </h2>
           <div className="bg-[#2a2a2a] border-l-4 border-blue-500 p-4 rounded mt-4">
             <p className="text-blue-400 font-semibold mb-2">Need SSL Configuration?</p>
