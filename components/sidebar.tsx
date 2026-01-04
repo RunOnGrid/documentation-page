@@ -87,6 +87,33 @@ export default function Sidebar() {
             />
           </Link>
         </NavItemWithChildren>
+
+        <NavItemWithChildren 
+          label="AWS" 
+          defaultOpen={pathname.includes("/aws")}
+        >
+          <Link href="/aws/account-setup">
+            <NavItem 
+              label="AWS Account Setup" 
+              active={pathname === "/aws/account-setup"} 
+              indent={1} 
+            />
+          </Link>
+          <Link href="/aws/s3-bucket">
+            <NavItem 
+              label="Create S3 Bucket" 
+              active={pathname === "/aws/s3-bucket"} 
+              indent={1} 
+            />
+          </Link>
+          <Link href="/aws/iam-access">
+            <NavItem 
+              label="Configure IAM Access" 
+              active={pathname === "/aws/iam-access"} 
+              indent={1} 
+            />
+          </Link>
+        </NavItemWithChildren>
       </div>
     </aside>
   )
